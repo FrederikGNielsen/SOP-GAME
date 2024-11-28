@@ -1,0 +1,15 @@
+{
+    "ID": 0,
+    "Speaker": "Martin",
+    "Text": "Character's first dialogue",
+    "Options": [
+        {
+            "Text": "Option 1",
+            "NextDialogueId": 1
+        },
+        {
+            "Text": "Option 2",
+            "NextDialogueId": 2
+        }
+    ]
+}

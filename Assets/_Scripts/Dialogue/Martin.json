@@ -1,0 +1,79 @@
+{
+    "dialogues": [
+        {
+            "ID": 1,
+            "Speaker": "Martin",
+            "Text": "Hej heeeeejj.",
+            "Options": [
+                {
+                    "Text": "Opsætning",
+                    "NextDialogueId": 2
+                },
+                {
+                    "Text": "Faglighed",
+                    "NextDialogueId": 2
+                },
+                {
+                    "Text": "Chrono Trigger",
+                    "NextDialogueId": 3
+                },
+                {
+                    "Text": "Lige meget",
+                    "NextDialogueId": 0
+                }
+            ]
+        },
+        {
+            "ID": 2,
+            "Speaker": "Martin",
+            "Text": "Jo jeg kan hjælpe dig, men det står jo ellers på vid-online ik’?",
+            "Options": [
+                {
+                    "Text": "Ja jeg ved det godt",
+                    "NextDialogueId": 0
+                },
+                {
+                    "Text": "Takker",
+                    "NextDialogueId": 0
+                },
+                {
+                    "Text": "Okay, sejt?",
+                    "NextDialogueId": 0
+                },
+                {
+                    "Text": "Tak, det husker jeg",
+                    "NextDialogueId": 0
+                }
+            ]
+        },
+        {
+            "ID": 3,
+            "Speaker": "Martin",
+            "Text": ":o",
+            "Options": [
+                {
+                    "Text": "Option 1",
+                    "NextDialogueId": -1
+                },
+                {
+                    "Text": "Option 2",
+                    "NextDialogueId": -1
+                },
+                {
+                    "Text": "Option 3",
+                    "NextDialogueId": -1
+                },
+                {
+                    "Text": "Option 4",
+                    "NextDialogueId": -1
+                }
+            ]
+        },
+        {
+            "ID": 0,
+            "Speaker": "Martin",
+            "Text": "Nå, ok ☹",
+            "Options": []
+        }
+    ]
+}
