@@ -38,8 +38,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Sko
-    second: {fileID: -6583833467743670079, guid: d887fb3953d8d324da828cfd7f40d2e6,
-      type: 3}
+    second: {fileID: 2100000, guid: 94afcea1ab271e749bf9cffd7779440b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

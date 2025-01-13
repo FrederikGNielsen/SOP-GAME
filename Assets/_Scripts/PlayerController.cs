@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance;
     public CharacterController characterController;
     
     [Header("Movement settings")]
@@ -39,6 +40,11 @@ public class PlayerController : MonoBehaviour
     public float Vertical;
 
     private Vector3 move;
+    
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     
     
@@ -111,6 +117,12 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(jump());
     }
 
+    public void MovePlayer(Vector3 position)
+    {
+        characterController.enabled = false;
+        transform.position = position;
+        characterController.enabled = true;
+    }
 
     public void inputHandler()
     {
