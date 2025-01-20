@@ -43,16 +43,19 @@ public class GameManager : MonoBehaviour
         if (timeOfDay >= dayLength)
         {
             timeOfDay = 0;
+            days++;
         }
     }
     
     public void ChangeTime(float time)
     {
-        timeOfDay += time;
+        timeOfDay += time * 60; // Convert minutes to seconds
         if (timeOfDay >= dayLength)
         {
-            timeOfDay = 0;
+            timeOfDay -= dayLength;
+            days++;
         }
+        sun.transform.rotation = Quaternion.Euler(new Vector3(timeOfDay / dayLength * 360f, 0, 0));
     }
     
     public void ChangeTimeScale(float scale)

@@ -22,16 +22,6 @@ public class ProgressBar : MonoBehaviour
 
     void Start()
     {
-        Section section1 = new Section
-        {
-            startValue = 0,
-            endValue = 36000,
-            color = Color.red
-        };
-
-        
-        sections.Add(section1);
-        
         InitializeSections();
     }
 
@@ -163,5 +153,14 @@ public class ProgressBar : MonoBehaviour
         sections[index].endValue = endValue;
         sections[index].color = color;
         InitializeSections();
+    }
+    
+    public Section getLatestSection()
+    {
+        if(sections.Count == 0)
+        {
+            return null;
+        }
+        return sections[sections.Count - 1];
     }
 }   

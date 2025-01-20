@@ -16,27 +16,42 @@ public class WordWriting : MonoBehaviour
     private float wordDelay;
     private float scrollSpeed;
 
-    private void Start()
-    {
-        IsWriting = true;
-
-        StartCoroutine(WriteText());
-    }
+    private bool IsWritingCoroutineRunning = false;
 
     private void Update()
     {
-        if(!IsWriting)
+        if (!IsWriting)
+        {
+            StopAllCoroutines();
             return;
-        wordDelay = 60 / wordsPerMinute;
-        float charactersPerMinute = wordsPerMinute * 5; // Assuming an average word length of 5 characters
+        }
+
+        wordDelay = 60 / (wordsPerMinute * COmputerDocument.instance.TimeSpending);
+        float charactersPerMinute = (wordsPerMinute * COmputerDocument.instance.TimeSpending) * 5; // Assuming an average word length of 5 characters
         float linesPerMinute = charactersPerMinute / 45; // Assuming an average line length of 45 characters
         scrollSpeed = linesPerMinute / 10; // Convert lines per minute to lines per second
         text.transform.Translate(Vector3.up * Time.deltaTime * scrollSpeed);
+
+        if (!IsWritingCoroutineRunning)
+        {
+            StartCoroutine(WriteText());
+        }
+    }
+    
+    public void StartWriting()
+    {
+        IsWriting = true;
+    }
+    
+    public void StopWriting()
+    {
+        IsWriting = false;
+        IsWritingCoroutineRunning = false;
     }
 
     IEnumerator WriteText()
     {
-        // Take lorem ipsum lines from file and write every second line
+        IsWritingCoroutineRunning = true;
         string[] lines = File.ReadAllLines("Assets/_Scripts/Writing/RandomWriting.txt");
 
         while (IsWriting)
@@ -52,5 +67,6 @@ public class WordWriting : MonoBehaviour
                 text.text += "\n";
             }
         }
+        IsWritingCoroutineRunning = false;
     }
 }
