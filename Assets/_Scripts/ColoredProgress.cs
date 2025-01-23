@@ -10,8 +10,8 @@ public class ProgressBar : MonoBehaviour
     {
         public float startValue;
         public float endValue;
-        public Color color;
         public Image image;
+        public float writingQuality; // 0-100
     }
 
     public List<Section> sections;
@@ -59,7 +59,7 @@ public class ProgressBar : MonoBehaviour
         */
     }
 
-    public void AddSection(float startValue, float endValue, Color color)
+    public void AddSection(float startValue, float endValue, Color color, float writingQuality)
     {
         if (startValue >= maxValue)
         {
@@ -71,7 +71,7 @@ public class ProgressBar : MonoBehaviour
         {
             startValue = startValue,
             endValue = endValue,
-            color = color
+            writingQuality = writingQuality
         };
 
         if (startValue >= endValue)
@@ -96,7 +96,7 @@ public class ProgressBar : MonoBehaviour
         InitializeSections();
     }
 
-    void InitializeSections()
+    public void InitializeSections()
     {
         value = 0;
         
@@ -117,7 +117,7 @@ public class ProgressBar : MonoBehaviour
     {
         GameObject sectionObject = Instantiate(sectionPrefab, progressBarContainer.transform);
         section.image = sectionObject.GetComponent<Image>();
-        section.image.color = section.color;
+        section.image.color = Color.Lerp(Color.red, Color.green, section.writingQuality / 100);
 
         // Set the position and size of the section
         RectTransform rectTransform = section.image.GetComponent<RectTransform>();
@@ -129,6 +129,9 @@ public class ProgressBar : MonoBehaviour
         rectTransform.anchorMax = new Vector2(sectionEndNormalized, 1);
         rectTransform.offsetMin = Vector2.zero;
         rectTransform.offsetMax = Vector2.zero;
+        
+        sectionObject.GetComponent<SectionButton>().section = section;
+        sectionObject.GetComponent<SectionButton>().progressBar = this;
     }
     
     public void RemoveSection(int index)
@@ -151,7 +154,6 @@ public class ProgressBar : MonoBehaviour
         }
         sections[index].startValue = startValue;
         sections[index].endValue = endValue;
-        sections[index].color = color;
         InitializeSections();
     }
     

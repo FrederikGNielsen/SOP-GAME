@@ -73,7 +73,21 @@
             "ID": 0,
             "Speaker": "Martin",
             "Text": "Nå, ok ☹",
-            "Options": []
+            "Options": [
+                {
+                    "Text": "Hej hej",
+                    "NextDialogueId": -1,
+                    "Events": [
+                        "StopTalking"
+                    ],
+                    "Rewards": [
+                        {
+                            "RewardType": "Plagiat",
+                            "RewardAmount": 50
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ca84e725c7c764aa5ed097918d14b7, type: 3}
+  m_Name: ftLocalStorage
+  m_EditorClassIdentifier: 
+  modifiedAssetPathList:
+  - Assets/Bakery/examples/content/sponza/sponza.FBX
+  - Assets/HouseFurniturePack/Meshes/Lamp_stand.FBX
+  - Assets/HouseFurniturePack/Meshes/Kitcabinet_upper_corner.FBX
+  - Assets/HouseFurniturePack/Meshes/Kitcabinet_upper_end.FBX
+  - Assets/HouseFurniturePack/Meshes/Kitcabinet_upper_1x_cookerhood.FBX
+  - Assets/HouseFurniturePack/Meshes/Kitcabinet_low_1x_stove.FBX
+  - Assets/HouseFurniturePack/Meshes/Kitcabinet_low_1x_dishwasher.FBX
+  - Assets/HouseFurniturePack/Meshes/Kitcabinet_low_1x_A.FBX
+  - Assets/HouseFurniturePack/Meshes/Fridge.FBX
+  - Assets/HouseFurniturePack/Meshes/Chair_leather.FBX
+  - Assets/HouseFurniturePack/Meshes/Carpet_living_room.FBX
+  - Assets/HouseFurniturePack/Meshes/Bed_small.FBX
+  - Assets/HouseFurniturePack/Meshes/Lamp_floor.FBX
+  - Assets/HouseFurniturePack/Meshes/Workdesk_solo.FBX
+  - Assets/HouseFurniturePack/Meshes/Carpet_hallway.FBX
+  - Assets/HouseFurniturePack/Meshes/D_alarmclock.FBX
+  - Assets/HouseFurniturePack/Meshes/Lamp_kitchen_A.FBX
+  - Assets/Modern Doors Pack/Meshes/Metal Door/metal_door_frame.fbx
+  - Assets/Modern Doors Pack/Meshes/Apartment Door/apartment_door_frame.fbx
+  - Assets/Modern Doors Pack/Meshes/Apartment Door/apartment_door_wood.fbx
+  - Assets/HouseFurniturePack/Meshes/D_TV_standing.FBX
+  - Assets/HouseFurniturePack/Meshes/Basement_table.FBX
+  - Assets/HouseFurniturePack/Meshes/Couch_3seat.FBX
+  - Assets/HouseFurniturePack/Meshes/Lightswitch.FBX
+  - Assets/HouseFurniturePack/Meshes/Workdesk_pens.FBX
+  - Assets/HouseFurniturePack/Meshes/Ventilationgrid.FBX
+  - Assets/HouseFurniturePack/Meshes/T_toiletpaper.FBX
+  - Assets/HouseFurniturePack/Meshes/T_shampoo.FBX
+  - Assets/HouseFurniturePack/Meshes/T_soap.FBX
+  - Assets/HouseFurniturePack/Meshes/T_sink.FBX
+  - Assets/HouseFurniturePack/Meshes/To_showercurtain.FBX
+  - Assets/HouseFurniturePack/Meshes/KP_lasagne.FBX
+  - Assets/HouseFurniturePack/Meshes/KP_plate_set.FBX
+  - Assets/HouseFurniturePack/Meshes/KP_plate.FBX
+  modifiedAssetPaddingHash: d6a958ff567e936380c5d890194efff0af67e2a8de09ecc01b3a803380c5d89013ac66911b3a8033f1f23a06c876a874df4dfff0bce6ca443f3fd3d909a3ddde1c7e9363fa4dfff09c09ecc01326a0dbd7c2a693e55031ee3f3fd3d9d7c12491f50aecc0eddb894be837ed041728c115ed37ed040fd59cb0fabdbc9675f23a0608dc894bf827c115

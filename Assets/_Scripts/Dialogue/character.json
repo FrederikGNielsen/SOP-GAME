@@ -1,15 +1,22 @@
 {
     "ID": 0,
-    "Speaker": "Martin",
+    "Speaker": "Character Name",
     "Text": "Character's first dialogue",
     "Options": [
         {
             "Text": "Option 1",
-            "NextDialogueId": 1
+            "NextDialogueId": 1,
+            "Events": [],
+            "Rewards": []
         },
         {
             "Text": "Option 2",
-            "NextDialogueId": 2
+            "NextDialogueId": 2,
+            "Events": [
+                "Event1",
+                "Event2"
+            ],
+            "Rewards": []
         }
     ]
 }

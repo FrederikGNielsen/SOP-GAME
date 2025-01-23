@@ -1,0 +1,53 @@
+{
+    "dialogues": [
+        {
+            "ID": 0,
+            "Speaker": "Character Name",
+            "Text": "Character's first dialogue",
+            "Options": [
+                {
+                    "Text": "Option 1",
+                    "NextDialogueId": 1
+                },
+                {
+                    "Text": "Option 2",
+                    "NextDialogueId": 2,
+                    "Events": [
+                        "StopTalking"
+                    ]
+                }
+            ]
+        },
+        {
+            "ID": 1,
+            "Speaker": "Character Name",
+            "Text": "This is the next dialogue after selecting Option 1.",
+            "Options": [
+                {
+                    "Text": "Go back",
+                    "NextDialogueId": 0
+                }
+            ]
+        },
+        {
+            "ID": 2,
+            "Speaker": "Character Name",
+            "Text": "This is the dialogue after selecting Option 2. Events will trigger here.",
+            "Options": [
+                {
+                    "Text": "Back to start",
+                    "NextDialogueId": 0
+                }
+            ],
+            "Events": [
+                "StopTalking"
+            ]
+        },
+        {
+            "ID": -1,
+            "Speaker": "System",
+            "Text": "Dialogue has ended.",
+            "Options": []
+        }
+    ]
+}

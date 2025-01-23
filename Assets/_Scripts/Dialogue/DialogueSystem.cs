@@ -40,7 +40,7 @@ public class DialogueSystem : MonoBehaviour
 
     void Start()
     {
-        //NewCharacterJsonFile();
+        NewCharacterJsonFile();
         //Talk("Martin");
         
         dialoguePanel.SetActive(false); 
@@ -51,19 +51,57 @@ public class DialogueSystem : MonoBehaviour
         isTalking = true;
         dialoguePanel.SetActive(true);
         Camera.main.GetComponent<PlayerCameraController>().enabled = false;
+        Camera.main.transform.parent.GetComponent<PlayerController>().enabled = false;
+        
+        //unlock cursor
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         
         LoadDialogues("Assets/_Scripts/Dialogue/" + CharacterName + ".json");
         DisplayDialogue(1);
+        
+        DebugListAllEvents();
 
+    }
+    
+    public void DebugListAllEvents()
+    {
+        foreach (Dialogue dialogue in dialogues)
+        {
+            Debug.Log($"Dialogue ID: {dialogue.ID}, Speaker: {dialogue.Speaker}");
+            foreach (Option option in dialogue.Options)
+            {
+                foreach (string eventName in option.Events)
+                {
+                    Debug.Log($"Event: {eventName}");
+                }
+            }
+        }
     }
     
     
     public void StopTalking()
     {
         isTalking = false;
+
+        // Reset dialogue panel and options
         dialoguePanel.SetActive(false);
+        foreach (Transform oldOption in optionsPanel.transform)
+        {
+            Destroy(oldOption.gameObject);
+        }
+
+        // Reset the current dialogue ID to an invalid state or default
+        currentDialogueId = -1;
+
+        // Re-enable other components, e.g., player controls
         Camera.main.GetComponent<PlayerCameraController>().enabled = true;
+        Camera.main.transform.parent.GetComponent<PlayerController>().enabled = true;
         
+        //lock cursor
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         Debug.Log("Stopped Talking");
     }
 
@@ -93,7 +131,8 @@ public class DialogueSystem : MonoBehaviour
                 new Option
                 {
                     Text = "Option 2",
-                    NextDialogueId = 2
+                    NextDialogueId = 2,
+                    Events = new List<string> { "Event1", "Event2" }
                 }
             }
         };
@@ -118,14 +157,6 @@ public class DialogueSystem : MonoBehaviour
                 foreach (Transform oldOption in optionsPanel.transform)
                 {
                     Destroy(oldOption.gameObject);
-                }
-
-                Debug.Log("Dialogue Found");
-                Debug.Log($"Speaker: {dialogue.Speaker}");
-                Debug.Log($"Text: {dialogue.Text}");
-                for (int i = 0; i < dialogue.Options.Count; i++)
-                {
-                    Debug.Log($"Option {i + 1}: {dialogue.Options[i].Text}");
                 }
             }
         }
@@ -186,19 +217,22 @@ public class DialogueSystem : MonoBehaviour
 
         Option selectedOption = currentDialogue.Options[optionIndex];
 
+        // Handle events first
         foreach (string eventName in selectedOption.Events)
         {
-            HandleEvent(eventName, selectedOption.Rewards);
+            HandleEvent(eventName, selectedOption.Rewards); // Pass rewards here
+            if (eventName == "StopTalking")
+            {
+                return; // Stop further processing if StopTalking is triggered
+            }
         }
 
-        if (selectedOption.Events.Contains("StopTalking"))
-        {
-            return; // Do not proceed to display the next dialogue
-        }
-
+        // Proceed to next dialogue if no StopTalking event is triggered
         currentDialogueId = selectedOption.NextDialogueId;
         DisplayDialogue(currentDialogueId);
     }
+
+
     
     #endregion
     
@@ -216,6 +250,7 @@ public class DialogueSystem : MonoBehaviour
                 break;
             case "StopTalking":
                 StopTalking();
+                Debug.Log("Stopped Talking");
                 break;
             default:
                 Debug.LogWarning($"Event '{eventName}' not recognized.");
@@ -227,6 +262,7 @@ public class DialogueSystem : MonoBehaviour
             if (!string.IsNullOrEmpty(reward.RewardType) && reward.RewardAmount > 0)
             {
                 GiveReward(reward.RewardType, reward.RewardAmount);
+                Debug.Log($"Given {reward.RewardAmount} {reward.RewardType}");
             }
         }
     }
