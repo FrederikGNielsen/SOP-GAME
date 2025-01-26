@@ -1,0 +1,130 @@
+{
+    "dialogues": [
+        {
+            "ID": 1,
+            "Speaker": "Niels",
+            "Text": "Yep? (Niels rammer dig med et blik af forventning, som instinktivt forbereder dig på snak om Magic)",
+            "Options": [
+                {
+                    "Text": "Matematik",
+                    "NextDialogueId": 2,
+                    "Events": ["PositiveAmplifier"]
+                },
+                {
+                    "Text": "Fysik",
+                    "NextDialogueId": 3,
+                    "Events": ["NegativeAmplifier"]
+                },
+                {
+                    "Text": "Magic?",
+                    "NextDialogueId": 4,
+                    "Events": ["PositiveAmplifier", "GlobalPositive"]
+                },
+                {
+                    "Text": "Glemte det ☹",
+                    "NextDialogueId": 0
+                }
+            ]
+        },
+        {
+            "ID": 2,
+            "Speaker": "Niels",
+            "Text": "Okay, lad os se på det...",
+            "Options": [
+                {
+                    "Text": "FORTSÆT",
+                    "NextDialogueId": 5
+                }
+            ]
+        },
+        {
+            "ID": 3,
+            "Speaker": "Niels",
+            "Text": "Jamen jeg er jo ikke fysiklærer, og heldigvis, kan kun forestille mig hvor træls det vil være",
+            "Options": [
+                {
+                    "Text": "I ligner hinanden",
+                    "NextDialogueId": "SLUT3"
+                },
+                {
+                    "Text": "Snæver øjnene",
+                    "NextDialogueId": "SLUT4"
+                },
+                {
+                    "Text": "Haha, morsomt...",
+                    "NextDialogueId": 0,
+                    "Events": ["NegativeAmplifier"]
+                },
+                {
+                    "Text": "Havde noget andet så",
+                    "NextDialogueId": 1
+                }
+            ]
+        },
+        {
+            "ID": 4,
+            "Speaker": "Niels",
+            "Text": "(Niels reagerer muntert til din forespørgsel, med et engageret og nysgerrigt blik) Ja? Hvad vil du vide?",
+            "Options": [
+                {
+                    "Text": "Jeg synes dit Magic deck er crazy mærkeligt.",
+                    "NextDialogueId": "SLUT9",
+                    "Events": ["LargePositiveAmplifier"]
+                },
+                {
+                    "Text": "Hvad er dine yndlingskort at have i et deck?",
+                    "NextDialogueId": "SLUT8",
+                    "Events": ["PositiveAmplifier"]
+                },
+                {
+                    "Text": "Hvordan holder du dig fra at bruge for mange penge på Magic?",
+                    "NextDialogueId": "SLUT7"
+                },
+                {
+                    "Text": "Tænkte bare lige på hvor dårligt det var",
+                    "NextDialogueId": "SLUT6",
+                    "Events": ["NegativeAmplifier", "GlobalNegative"]
+                }
+            ]
+        },
+        {
+            "ID": 5,
+            "Speaker": "Niels",
+            "Text": "Yep, den her (Pythagoras) har den funktion at være god til at lave udregninger med... (Han kikker ventende)",
+            "Options": [
+                {
+                    "Text": "Trekanter..?",
+                    "NextDialogueId": "SLUT1",
+                    "Events": ["LargePositiveAmplifier"]
+                },
+                {
+                    "Text": "Cirkler..?",
+                    "NextDialogueId": "SLUT2",
+                    "Events": ["NegativeAmplifier", "GlobalNegative"]
+                },
+                {
+                    "Text": "Broer..?",
+                    "NextDialogueId": "SLUT2",
+                    "Events": ["NegativeAmplifier", "GlobalNegative"]
+                },
+                {
+                    "Text": "Tårne..?",
+                    "NextDialogueId": "SLUT2",
+                    "Events": ["NegativeAmplifier", "GlobalNegative"]
+                }
+            ]
+        },
+        {
+            "ID": 0,
+            "Speaker": "Niels",
+            "Text": "Nå, ok ☹",
+            "Options": [
+                {
+                    "Text": "Hej hej",
+                    "NextDialogueId": -1,
+                    "Events": ["StopTalking"]
+                }
+            ]
+        }
+    ]
+}

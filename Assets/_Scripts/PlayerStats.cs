@@ -11,6 +11,8 @@ public class PlayerStats : MonoBehaviour
     
     public float tireness = 0;
     
+    public float ProductivityMultiplier = 1;
+    
     public Michsky.MUIP.ProgressBar energySlider;
     
     public void Awake()
@@ -37,5 +39,19 @@ public class PlayerStats : MonoBehaviour
             energy = 0;
         }
         energySlider.SetValue(energy);
+    }
+    
+    public void ChangeTireness(float amount)
+    {
+        tireness += amount;
+        if (tireness < 0)
+        {
+            tireness = 0;
+        }
+    }
+    
+    public void ChangeProductivity(float amount)
+    {
+        ProductivityMultiplier += amount;
     }
 }

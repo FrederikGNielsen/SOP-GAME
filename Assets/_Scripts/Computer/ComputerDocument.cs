@@ -1,8 +1,6 @@
 using System.Collections;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class ComputerDocument : MonoBehaviour
@@ -13,7 +11,6 @@ public class ComputerDocument : MonoBehaviour
     public ProgressBar.Section sectionToImprove;
 
     public float TimeSpending = 0; // how much time the player wants to spend
-    public float TimeSpent = 0; // how much time the player has spent in this study session
 
     public float EnergySpending = 0; // how much energy the player wants to spend in this study session
 
@@ -23,7 +20,7 @@ public class ComputerDocument : MonoBehaviour
     public Slider timeSlider;
     public float maxTime = 100;
     
-    public bool isImproving = false;
+    public bool isImproving;
 
     // GameObjects
     public GameObject blocker;
@@ -40,7 +37,7 @@ public class ComputerDocument : MonoBehaviour
         timeSlider.maxValue = maxTime;
         TimeSpending = timeSlider.value;
         EnergySpending = TimeSpending * 0.5f;
-        approximateWords = EnergySpending * productivity; // 1 min is 100 words
+        approximateWords = EnergySpending * (productivity * PlayerStats.instance.ProductivityMultiplier); // 1 min is 100 words
 
         timeSliderText.font = Resources.Load<TMP_FontAsset>("Fonts & Materials/LiberationMono-Regular SDF"); // Use a TMP_FontAsset
         
@@ -112,7 +109,7 @@ public class ComputerDocument : MonoBehaviour
             endValue = startValue + 1; // Ensure endValue is greater than startValue
         }
         Color color = Color.green;
-        progressBar.AddSection(startValue, endValue, color, 1);
+        progressBar.AddSection(startValue, endValue, color, Random.Range(25, 100));
     }
     
     IEnumerator ImproveSession()

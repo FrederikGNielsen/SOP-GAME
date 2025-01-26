@@ -9,6 +9,8 @@ public class Interactable : MonoBehaviour
     public UnityEvent selectEvent;
     public UnityEvent deselectEvent;
     
+    public string interactText;
+    
     public bool isInteractable = true;
     
     public bool HoldInteract = false;

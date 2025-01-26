@@ -19,6 +19,7 @@ public class NPC : MonoBehaviour
     
     
     
+    
     void Start()
     {
         _npc = GetComponent<NavMeshAgent>();

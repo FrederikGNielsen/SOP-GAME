@@ -7,12 +7,12 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance;
     public CharacterController characterController;
-    
+
     [Header("Movement settings")]
     public float crouchSpeed = 3;
     public float walkSpeed = 5;
     public float runSpeed = 7;
-    [Space(5)] 
+    [Space(5)]
     public float jumpForce = 5;
     public float gravity = 9.81f;
     public float vSpeed;
@@ -21,39 +21,37 @@ public class PlayerController : MonoBehaviour
     public GameObject groundCheck;
     public float groundCheckRadius;
     public LayerMask groundMask;
-    
+
     [Header("Ceiling Detection")]
     public GameObject ceilingCheck;
     public float ceilingCheckRadius;
     private bool checkedCeiling;
-    
-    
-    [Header("Booleans")] 
+
+    [Header("Booleans")]
     public bool isCrouching;
     public bool isWalking;
     public bool isRunning;
     public bool isGrounded;
     public bool isJumping;
-    
-    [Header("Input Variables")] 
+
+    [Header("Input Variables")]
     public float Horizontal;
     public float Vertical;
 
     private Vector3 move;
-    
+    private Vector3 smoothMoveVelocity;
+    private Vector3 currentMove;
+
     private void Awake()
     {
         Instance = this;
     }
 
-    
-    
     void Start()
     {
         characterController = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         inputHandler();
@@ -66,14 +64,13 @@ public class PlayerController : MonoBehaviour
 
     public void movementHandler()
     {
+        Vector3 targetMove = Vector3.zero;
+
         if (isCrouching)
         {
-            move = new Vector3(Horizontal, 0, Vertical).normalized;
-            move.z = Mathf.Clamp(move.z, -0.75f, 1f);
-            move = move * Time.deltaTime * crouchSpeed;
+            targetMove = new Vector3(Horizontal, 0, Vertical).normalized * crouchSpeed;
             characterController.height = 1.25f;
             Camera.main.gameObject.transform.localPosition = new Vector3(0, Mathf.Lerp(Camera.main.gameObject.transform.localPosition.y, 0.5f, 25 * Time.fixedDeltaTime), 0);
-
         }
         else
         {
@@ -83,32 +80,26 @@ public class PlayerController : MonoBehaviour
 
         if (isWalking)
         {
-            move = new Vector3(Horizontal, 0, Vertical).normalized;
-            move.z = Mathf.Clamp(move.z, -0.75f, 1f);
-            move = move * Time.fixedDeltaTime * walkSpeed;
+            targetMove = new Vector3(Horizontal, 0, Vertical).normalized * walkSpeed;
         }
 
         if (isRunning)
         {
-            move = new Vector3(Horizontal, 0, Vertical).normalized;
-            move.z = Mathf.Clamp(move.z, -0.75f, 1f);
-            move = move * Time.fixedDeltaTime * runSpeed;
-            
-            float playerMovingSpeed = new Vector2(characterController.velocity.x, characterController.velocity.z).sqrMagnitude * 5;
+            targetMove = new Vector3(Horizontal, 0, Vertical).normalized * runSpeed;
         }
-        
-        
-        characterController.Move(transform.TransformDirection(move));
 
-        if(!isGrounded && !isJumping)
+        currentMove = Vector3.SmoothDamp(currentMove, targetMove, ref smoothMoveVelocity, 0.1f);
+        characterController.Move(transform.TransformDirection(currentMove) * Time.fixedDeltaTime);
+
+        if (!isGrounded && !isJumping)
         {
             vSpeed -= gravity * Time.fixedDeltaTime;
-        } 
-        else if(!isJumping && (vSpeed < 1 || isGrounded))
+        }
+        else if (!isJumping && (vSpeed < 1 || isGrounded))
         {
             vSpeed = -2;
-            
         }
+
         characterController.Move(new Vector3(0, vSpeed * Time.fixedDeltaTime, 0));
     }
 
@@ -126,15 +117,12 @@ public class PlayerController : MonoBehaviour
 
     public void inputHandler()
     {
-        //Input
         Horizontal = Input.GetAxisRaw("Horizontal");
         Vertical = Input.GetAxisRaw("Vertical");
-        
-        //Ground Detection
+
         isGrounded = Physics.CheckSphere(groundCheck.transform.position, groundCheckRadius, groundMask);
-        
-        //Ceiling Detection
-        if(Physics.CheckSphere(ceilingCheck.transform.position, ceilingCheckRadius, groundMask))
+
+        if (Physics.CheckSphere(ceilingCheck.transform.position, ceilingCheckRadius, groundMask))
         {
             if (checkedCeiling == false)
             {
@@ -146,16 +134,14 @@ public class PlayerController : MonoBehaviour
         {
             checkedCeiling = false;
         }
-        
-        
 
-        //Movement Booleans
         if (Input.GetKey(KeyCode.LeftShift))
         {
             isWalking = false;
             isRunning = true;
             isCrouching = false;
-        } else if (!isRunning && Input.GetKey(KeyCode.LeftControl))
+        }
+        else if (!isRunning && Input.GetKey(KeyCode.LeftControl))
         {
             isWalking = false;
             isCrouching = true;
@@ -167,10 +153,8 @@ public class PlayerController : MonoBehaviour
             isRunning = false;
             isCrouching = false;
         }
-        
-        
-        //Jumping
-        if(isGrounded && Input.GetButtonDown("Jump") && !isJumping)
+
+        if (isGrounded && Input.GetButtonDown("Jump") && !isJumping)
         {
             Jump();
         }
@@ -183,5 +167,4 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.15f);
         isJumping = false;
     }
-
 }

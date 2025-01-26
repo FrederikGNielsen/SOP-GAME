@@ -5119,3 +5119,689 @@ C:\build\output\Unity-Technologies\mono\mono\eglib\gpath.c:115: assertion 'filen
 
 Total cache size 268414084
 Total cache size after purge 268414084
+Total cache size 268414084
+Total cache size after purge 268414084
+abort_threads: Failed aborting id: 00000000000032AC, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000007B84, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 00000000000032AC, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000007B84, mono_thread_manage will ignore it
+
+2025-1-24
+Rendering UV GBuffer for SampleScene_LM0 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SampleScene_LMA1 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LM0.lz4" 2 0 0 0
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LMA1.lz4" 2 0 1 0
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_0_0_0" 4 0 0 batchpointlight_0_0_0.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_0_1_4" 4 0 0 batchpointlight_0_1_4.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_1_0_0" 4 0 1 batchpointlight_1_0_0.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_1_1_4" 4 0 1 batchpointlight_1_1_4.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM00.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA10.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM01.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA11.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM02.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA12.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM03.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA13.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_final" 4 16 0 "gi_SampleScene_LM04.bin" "SampleScene_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_final" 4 16 1 "gi_SampleScene_LMA14.bin" "SampleScene_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "0" "SampleScene_LM0_final_HDR.lz4"
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "1" "SampleScene_LMA1_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LM0_final.hdr" 1024
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LMA1_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 256x256: 1
+Done
+Rendering UV GBuffer for SampleScene_LM0 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SampleScene_LMA1 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LMA1.lz4" 2 0 1 0
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LM0.lz4" 2 0 0 0
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_1_0_0" 4 0 1 batchpointlight_1_0_0.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_1_1_4" 4 0 1 batchpointlight_1_1_4.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_0_0_0" 4 0 0 batchpointlight_0_0_0.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_0_1_4" 4 0 0 batchpointlight_0_1_4.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA10.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM00.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA11.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM01.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA12.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM02.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA13.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM03.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_final" 4 16 1 "gi_SampleScene_LMA14.bin" "SampleScene_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_final" 4 16 0 "gi_SampleScene_LM04.bin" "SampleScene_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "1" "SampleScene_LMA1_final_HDR.lz4"
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "0" "SampleScene_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LM0_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 256x256: 1
+Done
+Rendering UV GBuffer for SampleScene_LM0 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SampleScene_LMA1 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LMA1.lz4" 2 0 1 0
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LM0.lz4" 2 0 0 0
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_1_0_0" 4 0 1 batchpointlight_1_0_0.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_1_1_4" 4 0 1 batchpointlight_1_1_4.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_0_0_0" 4 0 0 batchpointlight_0_0_0.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_0_1_4" 4 0 0 batchpointlight_0_1_4.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA10.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM00.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA11.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM01.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA12.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM02.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA13.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM03.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_final" 4 16 1 "gi_SampleScene_LMA14.bin" "SampleScene_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_final" 4 16 0 "gi_SampleScene_LM04.bin" "SampleScene_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "1" "SampleScene_LMA1_final_HDR.lz4"
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "0" "SampleScene_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LM0_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 256x256: 1
+Done
+Rendering UV GBuffer for SampleScene_LM0 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SampleScene_LMA1 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LM0.lz4" 2 0 0 0
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LMA1.lz4" 2 0 1 0
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_0_0_1" 4 0 0 batchpointlight_0_0_1.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_0_2_5" 4 0 0 batchpointlight_0_2_5.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_1_0_1" 4 0 1 batchpointlight_1_0_1.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_1_2_5" 4 0 1 batchpointlight_1_2_5.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM00.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA10.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM01.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA11.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM02.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA12.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM03.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA13.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_final" 4 16 0 "gi_SampleScene_LM04.bin" "SampleScene_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_final" 4 16 1 "gi_SampleScene_LMA14.bin" "SampleScene_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "0" "SampleScene_LM0_final_HDR.lz4"
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "1" "SampleScene_LMA1_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LM0_final.hdr" 1024
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LMA1_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 256x256: 1
+Done
+Rendering UV GBuffer for SampleScene_LM0 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SampleScene_LMA1 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LMA1.lz4" 2 0 1 0
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LM0.lz4" 2 0 0 0
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_1_0_1" 4 0 1 batchpointlight_1_0_1.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_1_2_5" 4 0 1 batchpointlight_1_2_5.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_0_0_1" 4 0 0 batchpointlight_0_0_1.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_0_2_5" 4 0 0 batchpointlight_0_2_5.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA10.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM00.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA11.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM01.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA12.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM02.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA13.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM03.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_final" 4 16 1 "gi_SampleScene_LMA14.bin" "SampleScene_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_final" 4 16 0 "gi_SampleScene_LM04.bin" "SampleScene_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "1" "SampleScene_LMA1_final_HDR.lz4"
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "0" "SampleScene_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LM0_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 256x256: 1
+Done
+Rendering UV GBuffer for SampleScene_LM0 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SampleScene_LMA1 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LMA1.lz4" 2 0 1 0
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LM0.lz4" 2 0 0 0
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_1_0_1" 4 0 1 batchpointlight_1_0_1.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_1_2_5" 4 0 1 batchpointlight_1_2_5.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_0_0_1" 4 0 0 batchpointlight_0_0_1.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_0_2_5" 4 0 0 batchpointlight_0_2_5.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA10.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM00.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA11.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM01.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA12.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM02.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA13.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM03.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_final" 4 16 1 "gi_SampleScene_LMA14.bin" "SampleScene_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_final" 4 16 0 "gi_SampleScene_LM04.bin" "SampleScene_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "1" "SampleScene_LMA1_final_HDR.lz4"
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "0" "SampleScene_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LM0_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 256x256: 1
+Done
+Rendering UV GBuffer for SampleScene_LM0 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SampleScene_LMA1 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SampleScene_LMA2 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LM0.lz4" 2 0 0 0
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LMA2.lz4" 2 0 2 0
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LMA1.lz4" 2 0 1 0
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_0_0_2" 4 0 0 batchpointlight_0_0_2.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_0_3_6" 4 0 0 batchpointlight_0_3_6.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_2_0_2" 4 0 2 batchpointlight_2_0_2.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_2_3_6" 4 0 2 batchpointlight_2_3_6.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA2" 4 0 2 comp_2.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_1_0_2" 4 0 1 batchpointlight_1_0_2.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_1_3_6" 4 0 1 batchpointlight_1_3_6.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM00.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA2_diffuse" 4 16 2 "gi_SampleScene_LMA20.bin" "SampleScene_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA10.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM01.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA2_diffuse" 4 16 2 "gi_SampleScene_LMA21.bin" "SampleScene_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA11.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM02.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA2_diffuse" 4 16 2 "gi_SampleScene_LMA22.bin" "SampleScene_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA12.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM03.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA2_diffuse" 4 16 2 "gi_SampleScene_LMA23.bin" "SampleScene_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA13.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_final" 4 16 0 "gi_SampleScene_LM04.bin" "SampleScene_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA2_final" 4 16 2 "gi_SampleScene_LMA24.bin" "SampleScene_LMA2_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_final" 4 16 1 "gi_SampleScene_LMA14.bin" "SampleScene_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "0" "SampleScene_LM0_final_HDR.lz4"
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA2_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA2_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "2" "SampleScene_LMA2_final_HDR.lz4"
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "1" "SampleScene_LMA1_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LM0_final.hdr" 1024
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA2_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LMA2_final.hdr" 1024
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LMA1_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 256x256: 1
+Done
+Rendering UV GBuffer for SampleScene_LM0 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SampleScene_LMA1 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for SampleScene_LMA2 50
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LMA1.lz4" 2 0 1 0
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LM0.lz4" 2 0 0 0
+Running ftraceRTX fixpos12 "C:\Users\frede\AppData\Local\Temp\frender" "uvpos_SampleScene_LMA2.lz4" 2 0 2 0
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_1_0_2" 4 0 1 batchpointlight_1_0_2.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_1_3_6" 4 0 1 batchpointlight_1_3_6.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_0_0_2" 4 0 0 batchpointlight_0_0_2.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_0_3_6" 4 0 0 batchpointlight_0_3_6.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_2_0_2" 4 0 2 batchpointlight_2_0_2.bin
+Running ftraceRTX batchpointlightlegacy "C:\Users\frede\AppData\Local\Temp\frender" "PointBatch_2_3_6" 4 0 2 batchpointlight_2_3_6.bin
+Running ftraceRTX addmul "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA2" 4 0 2 comp_2.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA10.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM00.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA2_diffuse" 4 16 2 "gi_SampleScene_LMA20.bin" "SampleScene_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA11.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM01.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA2_diffuse" 4 16 2 "gi_SampleScene_LMA21.bin" "SampleScene_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA12.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM02.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA2_diffuse" 4 16 2 "gi_SampleScene_LMA22.bin" "SampleScene_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_diffuse" 4 16 1 "gi_SampleScene_LMA13.bin" "SampleScene_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_diffuse" 4 16 0 "gi_SampleScene_LM03.bin" "SampleScene_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA2_diffuse" 4 16 2 "gi_SampleScene_LMA23.bin" "SampleScene_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA1_final" 4 16 1 "gi_SampleScene_LMA14.bin" "SampleScene_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LM0_final" 4 16 0 "gi_SampleScene_LM04.bin" "SampleScene_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\frede\AppData\Local\Temp\frender" "SampleScene_LMA2_final" 4 16 2 "gi_SampleScene_LMA24.bin" "SampleScene_LMA2_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "1" "SampleScene_LMA1_final_HDR.lz4"
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "0" "SampleScene_LM0_final_HDR.lz4"
+Running denoiserOIDN2 c "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA2_final_HDR.lz4" "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA2_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\frede\AppData\Local\Temp\frender" "2" "SampleScene_LMA2_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA1_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LM0_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LM0_final.hdr" 1024
+Running halffloat2hdr "C:\Users\frede\AppData\Local\Temp\frender/SampleScene_LMA2_final_HDR.lz4" "C:/Users/frede/Documents/GitHub/SOP-GAME/Assets/BakeryLightmaps/SampleScene_LMA2_final.hdr" 1024
+[17:44:24] INFO: Umbra 3 Optimizer version 3.3.22  (build: 58bc48d2405823a0d92fca7d7a5dac9d02e0a94b)
+[17:44:24] INFO: T: 20 O: 5 H: 0.25 B: 100
+[17:44:24] INFO: Tile grid 8x8x4 (at -24,-4,36) created for scene: 4 tiles (0 empties not included) in 0.003 seconds
+[17:44:24] INFO: Using 16 threads to compute 4 tiles, cache 4096 MB
+[17:44:24] INFO: Tile processing complete, computed 4 tiles
+[17:44:24] INFO: Strict view volumes: no
+[17:44:24] INFO: Filtered 0/6 inside clusters
+[17:44:24] INFO: Filtered 0/6 global clusters
+[17:44:24] INFO: 16/16 cells reachable after global analysis
+[17:44:24] INFO: collapsed leaf tiles 4 => 1
+[17:44:24] INFO: Generating LOD tiles using 16 threads
+[17:44:24] INFO: Connecting LOD tiles
+[17:44:24] INFO: Compressing lists
+[17:44:24] INFO: Average index range size: 49.31
+[17:44:24] INFO: object list: 128 B, cluster list: 0 B
+[17:44:24] INFO: created tome with 1 tiles, 78 targets and 0 gates
+[17:44:24] INFO: Checking cache...
+[17:44:24] INFO: Cache check finished
+Total cache size 268414084
+Total cache size after purge 268414084
+Total cache size 280175380
+Total cache size after purge 268255784
+C:\build\output\Unity-Technologies\mono\mono\eglib\gpath.c:115: assertion 'filename != NULL' failed
+
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+C:\build\output\Unity-Technologies\mono\mono\eglib\gpath.c:115: assertion 'filename != NULL' failed
+
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+C:\build\output\Unity-Technologies\mono\mono\eglib\gpath.c:115: assertion 'filename != NULL' failed
+
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+C:\build\output\Unity-Technologies\mono\mono\eglib\gpath.c:115: assertion 'filename != NULL' failed
+
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+[             ] Require frontend run.  Library/Bee/Playerc2051cfe.dag couldn't be loaded
+Finished compiling graph: 163 nodes, 323 flattened edges (323 ToBuild, 0 ToUse), maximum node priority 7
+[  1/162    0s] WriteText Library/Bee/artifacts/csharpactions/boot.config_tyr4.info
+[  2/162    0s] WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info
+[  3/162    0s] CopyFiles Builds/SOP GAME_Data/app.info
+[  4/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/config
+[  5/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx
+[  6/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/4.5/settings.map
+[  7/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx
+[  8/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/4.0/settings.map
+[  9/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser
+[ 10/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser
+[ 11/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/browscap.ini
+[ 12/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/2.0/settings.map
+[ 13/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/4.5/web.config
+[ 14/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx
+[ 15/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser
+[ 16/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/4.5/machine.config
+[ 17/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.Xml.dll
+[ 18/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.dll
+[ 19/162    0s] CopyFiles Builds/SOP GAME_Data/Resources/unity default resources
+[ 20/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.Xml.Linq.dll
+[ 21/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/mscorlib.dll
+[ 22/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.ServiceModel.Internals.dll
+[ 23/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/4.0/machine.config
+[ 24/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.Runtime.Serialization.dll
+[ 25/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.Numerics.dll
+[ 26/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.Net.Http.dll
+[ 27/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.Security.dll
+[ 28/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.Transactions.dll
+[ 29/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.IO.Compression.dll
+[ 30/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/4.0/web.config
+[ 31/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.IO.Compression.FileSystem.dll
+[ 32/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.EnterpriseServices.dll
+[ 33/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.Drawing.dll
+[ 34/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.Data.dll
+[ 35/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.Core.dll
+[ 36/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.Configuration.dll
+[ 37/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.Data.DataSetExtensions.dll
+[ 38/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.ComponentModel.Composition.dll
+[ 39/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/netstandard.dll
+[ 40/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Mono.Security.dll
+[ 41/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.Burst.Unsafe.dll
+[ 42/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/System.Runtime.dll
+[ 43/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll
+[ 44/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.VisualScripting.State.dll
+[ 45/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.ProBuilder.KdTree.dll
+[ 46/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.RenderPipelines.Universal.Shaders.dll
+[ 47/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.TextMeshPro.dll
+[ 48/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.ProBuilder.Poly2Tri.dll
+[ 49/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll
+[ 50/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.Animation.Rigging.DocCodeExamples.dll
+[ 51/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.Mathematics.dll
+[ 52/162    0s] CopyFiles Builds/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll
+[ 53/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.Timeline.dll
+[ 54/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.RenderPipelines.Universal.Config.Runtime.dll
+[ 55/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.VisualScripting.Flow.dll
+[ 56/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll
+[ 57/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/BakeryRuntimeAssembly.dll
+[ 58/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.ProBuilder.Csg.dll
+[ 59/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.UI.dll
+[ 60/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.VisualScripting.Core.dll
+[ 61/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.Burst.dll
+[ 62/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.ProBuilder.dll
+[ 63/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.ProBuilder.Stl.dll
+[ 64/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll
+[ 65/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.Animation.Rigging.dll
+[ 66/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
+[ 67/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Assembly-CSharp-firstpass.dll
+[ 68/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.dll
+[ 69/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.XRModule.dll
+[ 70/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.WindModule.dll
+[ 71/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Assembly-CSharp.dll
+[ 72/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.RenderPipelines.Universal.Runtime.dll
+[ 73/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/mconfig/config.xml
+[ 74/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.VirtualTexturingModule.dll
+[ 75/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.VehiclesModule.dll
+[ 76/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.VideoModule.dll
+[ 77/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Unity.AI.Navigation.dll
+[ 78/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.VFXModule.dll
+[ 79/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll
+[ 80/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll
+[ 81/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.VRModule.dll
+[ 82/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll
+[ 83/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.UnityWebRequestModule.dll
+[ 84/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.UnityCurlModule.dll
+[ 85/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll
+[ 86/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.UnityConnectModule.dll
+[ 87/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.UmbraModule.dll
+[ 88/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.UnityTestProtocolModule.dll
+[ 89/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.UnityAnalyticsModule.dll
+[ 90/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll
+[ 91/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.UIModule.dll
+[ 92/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.UIElementsModule.dll
+[ 93/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.TilemapModule.dll
+[ 94/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.TextRenderingModule.dll
+[ 95/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll
+[ 96/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.TerrainModule.dll
+[ 97/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.SubsystemsModule.dll
+[ 98/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll
+[ 99/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.TLSModule.dll
+[100/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.TerrainPhysicsModule.dll
+[101/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.SubstanceModule.dll
+[102/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.StreamingModule.dll
+[103/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.SpriteShapeModule.dll
+[104/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.SpriteMaskModule.dll
+[105/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.SharedInternalsModule.dll
+[106/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll
+[107/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.ScreenCaptureModule.dll
+[108/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.PropertiesModule.dll
+[109/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.PhysicsModule.dll
+[110/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.Physics2DModule.dll
+[111/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.PerformanceReportingModule.dll
+[112/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.ProfilerModule.dll
+[113/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.ParticleSystemModule.dll
+[114/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.NVIDIAModule.dll
+[115/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.LocalizationModule.dll
+[116/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.InputModule.dll
+[117/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.JSONSerializeModule.dll
+[118/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.ImageConversionModule.dll
+[119/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.IMGUIModule.dll
+[120/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.InputLegacyModule.dll
+[121/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.HotReloadModule.dll
+[122/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.GridModule.dll
+[123/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.GameCenterModule.dll
+[124/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.GIModule.dll
+[125/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.DirectorModule.dll
+[126/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.DSPGraphModule.dll
+[127/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.CrashReportingModule.dll
+[128/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.ContentLoadModule.dll
+[129/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.ClusterRendererModule.dll
+[130/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.ClusterInputModule.dll
+[131/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.ClothModule.dll
+[132/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.CoreModule.dll
+[133/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.AudioModule.dll
+[134/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.AssetBundleModule.dll
+[135/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.AnimationModule.dll
+[136/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.AndroidJNIModule.dll
+[137/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.AccessibilityModule.dll
+[138/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.ARModule.dll
+[139/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/UnityEngine.AIModule.dll
+[140/162    0s] CopyFiles Builds/SOP GAME_Data/ScriptingAssemblies.json
+[141/162    0s] CopyFiles Builds/SOP GAME_Data/Resources/unity_builtin_extra
+[142/162    0s] CopyFiles Builds/SOP GAME_Data/level0.resS
+[143/162    0s] CopyFiles Builds/SOP GAME_Data/resources.assets.resS
+[144/162    0s] CopyFiles Builds/SOP GAME_Data/resources.assets
+[145/162    0s] CopyFiles Builds/SOP GAME_Data/sharedassets0.assets
+[146/162    0s] CopyFiles Builds/SOP GAME_Data/globalgamemanagers
+[147/162    0s] CopyFiles Builds/SOP GAME_Data/globalgamemanagers.assets
+[148/162    0s] CopyFiles Builds/SOP GAME_Data/level0
+[149/162    0s] CopyFiles Builds/SOP GAME_Data/globalgamemanagers.assets.resS
+[150/162    0s] CopyFiles Builds/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll
+[151/162    0s] CopyFiles Builds/UnityCrashHandler64.exe
+[152/162    0s] CopyFiles Builds/SOP GAME_Data/RuntimeInitializeOnLoads.json
+[153/162    0s] CopyFiles Builds/SOP GAME_Data/sharedassets0.assets.resS
+[154/162    0s] CopyFiles Builds/UnityPlayer.dll
+[155/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/2.0/machine.config
+[156/162    0s] CopyFiles Builds/MonoBleedingEdge/etc/mono/2.0/web.config
+[157/162    0s] CopyFiles Builds/SOP GAME.exe
+[158/162    0s] AddBootConfigGUID Library/Bee/artifacts/WinPlayerBuildProgram/boot.config
+[159/162    0s] CopyFiles Builds/SOP GAME_Data/boot.config
+[160/162    7s] GenerateNativePluginsForAssemblies Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker
+*** Tundra requires additional run (7.32 seconds), 160 items updated, 162 evaluated
+*** Additional run caused by: timestamp change of Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker
+Finished compiling graph: 163 nodes, 323 flattened edges (323 ToBuild, 0 ToUse), maximum node priority 7
+[161/162    0s] CopyFiles Builds/SOP GAME_Data/Plugins/x86_64/lib_burst_generated.dll
+*** Tundra build success (0.08 seconds), 1 items updated, 162 evaluated
+Total cache size 268255784
+Total cache size after purge 268255784
+C:\build\output\Unity-Technologies\mono\mono\eglib\gpath.c:115: assertion 'filename != NULL' failed
+
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+C:\build\output\Unity-Technologies\mono\mono\eglib\gpath.c:115: assertion 'filename != NULL' failed
+
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+Total cache size 268255784
+Total cache size after purge 268255784
+[146/162    0s] CopyFiles Builds/SOP GAME_Data/Managed/Assembly-CSharp.dll
+[147/162    0s] CopyFiles Builds/SOP GAME_Data/Resources/unity_builtin_extra
+[149/162    0s] CopyFiles Builds/SOP GAME_Data/level0.resS
+[150/162    0s] CopyFiles Builds/SOP GAME_Data/globalgamemanagers.assets
+[151/162    0s] CopyFiles Builds/SOP GAME_Data/resources.assets
+[152/162    0s] CopyFiles Builds/SOP GAME_Data/level0
+[153/162    0s] CopyFiles Builds/SOP GAME_Data/globalgamemanagers
+[154/162    0s] CopyFiles Builds/SOP GAME_Data/resources.assets.resS
+[155/162    0s] CopyFiles Builds/SOP GAME_Data/sharedassets0.assets
+[156/162    0s] CopyFiles Builds/SOP GAME_Data/globalgamemanagers.assets.resS
+[157/162    0s] CopyFiles Builds/SOP GAME_Data/sharedassets0.assets.resS
+[158/162    0s] AddBootConfigGUID Library/Bee/artifacts/WinPlayerBuildProgram/boot.config
+[159/162    0s] CopyFiles Builds/SOP GAME_Data/boot.config
+[160/162    2s] GenerateNativePluginsForAssemblies Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker
+*** Tundra build success (2.34 seconds), 14 items updated, 162 evaluated
+Total cache size 268255784
+Total cache size after purge 268255784

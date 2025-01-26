@@ -24,6 +24,8 @@ public class DialogueSystem : MonoBehaviour
     public GameObject optionPrefab;
     #endregion
     
+    private HashSet<int> usedOptionIds = new HashSet<int>();
+    
     
     private int currentDialogueId;
     public List<Dialogue> dialogues;
@@ -217,14 +219,25 @@ public class DialogueSystem : MonoBehaviour
 
         Option selectedOption = currentDialogue.Options[optionIndex];
 
-        // Handle events first
-        foreach (string eventName in selectedOption.Events)
+        // Check if the option has already been used
+        if (usedOptionIds.Contains(selectedOption.NextDialogueId))
         {
-            HandleEvent(eventName, selectedOption.Rewards); // Pass rewards here
-            if (eventName == "StopTalking")
+            Debug.LogWarning("This option has already been used for rewards.");
+        }
+        else
+        {
+            // Handle events first
+            foreach (string eventName in selectedOption.Events)
             {
-                return; // Stop further processing if StopTalking is triggered
+                HandleEvent(eventName, selectedOption.Rewards); // Pass rewards here
+                if (eventName == "StopTalking")
+                {
+                    return; // Stop further processing if StopTalking is triggered
+                }
             }
+
+            // Mark the option as used
+            usedOptionIds.Add(selectedOption.NextDialogueId);
         }
 
         // Proceed to next dialogue if no StopTalking event is triggered
@@ -242,11 +255,23 @@ public class DialogueSystem : MonoBehaviour
     {
         switch (eventName)
         {
-            case "Event1":
-                //Event1();
+            case "SmallAmplifier":
+                GiveAmplifier("Small");
                 break;
-            case "Event2":
-                //Event2();
+            case "MediumAmplifier":
+                GiveAmplifier("Medium");
+                break;
+            case "LargeAmplifier":
+                GiveAmplifier("Large");
+                break;
+            case "SmallNegativeAmplifier":
+                GiveAmplifier("SmallNegative");
+                break;
+            case "MediumNegativeAmplifier":
+                GiveAmplifier("MediumNegative");
+                break;
+            case "LargeNegativeAmplifier":
+                GiveAmplifier("LargeNegative");
                 break;
             case "StopTalking":
                 StopTalking();
@@ -266,6 +291,12 @@ public class DialogueSystem : MonoBehaviour
             }
         }
     }
+    
+    public void ResetUsedOptionIds()
+    {
+        usedOptionIds.Clear();
+        Debug.Log("Used option IDs have been reset.");
+    }
 
     void GiveReward(string rewardType, int rewardAmount)
     {
@@ -281,6 +312,37 @@ public class DialogueSystem : MonoBehaviour
                 break;
             default:
                 Debug.LogWarning($"Reward type '{rewardType}' not recognized.");
+                break;
+        }
+    }
+    
+    public void GiveAmplifier(string amplifierType)
+    {
+        switch (amplifierType)
+        {
+            case "Small":
+                Debug.Log("Small Amplifier");
+                PlayerStats.instance.ChangeProductivity(0.1f);
+                break;
+            case "Medium":
+                Debug.Log("Medium Amplifier");
+                PlayerStats.instance.ChangeProductivity(0.2f);
+                break;
+            case "Large":
+                Debug.Log("Large Amplifier");
+                PlayerStats.instance.ChangeProductivity(0.3f);
+                break;
+            case "SmallNegative":
+                Debug.Log("Small Negative Amplifier");
+                PlayerStats.instance.ChangeProductivity(-0.1f);
+                break;
+            case "MediumNegative":
+                Debug.Log("Medium Negative Amplifier");
+                PlayerStats.instance.ChangeProductivity(-0.2f);
+                break;
+            case "LargeNegative":
+                Debug.Log("Large Negative Amplifier");
+                PlayerStats.instance.ChangeProductivity(-0.3f);
                 break;
         }
     }

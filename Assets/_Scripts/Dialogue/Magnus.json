@@ -1,0 +1,203 @@
+{
+    "dialogues": [
+        {
+            "ID": 1,
+            "Speaker": "Magnus",
+            "Text": "Hej min ven!",
+            "Options": [
+                {
+                    "Text": "Kemi",
+                    "NextDialogueId": 2,
+                    "Events": [
+                        "SmallAmplifier",
+                        "GrowingAmplifier"
+                    ]
+                },
+                {
+                    "Text": "podcast",
+                    "NextDialogueId": 3,
+                    "Events": [
+                        "MediumAmplifier"
+                    ]
+                },
+                {
+                    "Text": "Glemte det",
+                    "NextDialogueId": 0,
+                    "Events": [
+                        "StopTalking"
+                    ]
+                }
+            ]
+        },
+        {
+            "ID": 2,
+            "Speaker": "Magnus",
+            "Text": "Hvad kan jeg gøre?",
+            "Options": [
+                {
+                    "Text": "Syre og baser",
+                    "NextDialogueId": 6,
+                    "Events": [
+                        "SmallAmplifier",
+                        "GrowingAmplifier"
+                    ]
+                },
+                {
+                    "Text": "Forsøg til SOP",
+                    "NextDialogueId": 7,
+                    "Events": [
+                        "MediumAmplifier"
+                    ]
+                },
+                {
+                    "Text": "Ikke noget alligevel",
+                    "NextDialogueId": 0,
+                    "Events": [
+                        "StopTalking"
+                    ]
+                }
+            ]
+        },
+        {
+            "ID": 3,
+            "Speaker": "Magnus",
+            "Text": "Noget specielt du ville vide?",
+            "Options": [
+                {
+                    "Text": "Hvad handler den om",
+                    "NextDialogueId": 4,
+                    "Events": [
+                        "SmallAmplifier"
+                    ]
+                },
+                {
+                    "Text": "Hvor kan jeg høre den",
+                    "NextDialogueId": 5,
+                    "Events": [
+                        "MediumAmplifier"
+                    ]
+                },
+                {
+                    "Text": "Lige meget",
+                    "NextDialogueId": 0,
+                    "Events": [
+                        "SmallNegativeAmplifier",
+                        "StopTalking"
+                    ]
+                }
+            ]
+        },
+        {
+            "ID": 4,
+            "Speaker": "Magnus",
+            "Text": "En masse forskellige sjove ting fra kemi og en masse andre ting",
+            "Options": [
+                {
+                    "Text": "Lyder godt",
+                    "NextDialogueId": 0,
+                    "Events": [
+                        "StopTalking"
+                    ]
+                },
+                {
+                    "Text": "Hvor kan jeg høre den",
+                    "NextDialogueId": 5,
+                    "Events": [
+                        "MediumAmplifier"
+                    ]
+                }
+            ]
+        },
+        {
+            "ID": 5,
+            "Speaker": "Magnus",
+            "Text": "På Spotify",
+            "Options": [
+                {
+                    "Text": "Nice",
+                    "NextDialogueId": 0,
+                    "Events": [
+                        "StopTalking"
+                    ]
+                },
+                {
+                    "Text": "Fantastisk",
+                    "NextDialogueId": 0,
+                    "Events": [
+                        "SmallAmplifier",
+                        "StopTalking"
+                    ]
+                }
+            ]
+        },
+        {
+            "ID": 6,
+            "Speaker": "Magnus",
+            "Text": "Ja da, lad mig vise det nødvendige",
+            "Options": [
+                {
+                    "Text": "Tak Magnus",
+                    "NextDialogueId": 8
+                },
+                {
+                    "Text": "Hvis du siger det",
+                    "NextDialogueId": 0,
+                    "Events": [
+                        "SmallNegativeAmplifier",
+                        "StopTalking"
+                    ]
+                }
+            ]
+        },
+        {
+            "ID": 7,
+            "Speaker": "Magnus",
+            "Text": "Jeg kan vise nogle gode forsøg til SOP",
+            "Options": [
+                {
+                    "Text": "Mange tak",
+                    "NextDialogueId": 8,
+                    "Events": [
+                        "SmallAmplifier"
+                    ]
+                },
+                {
+                    "Text": "Når",
+                    "NextDialogueId": 0,
+                    "Events": [
+                        "MediumNegativeAmplifier",
+                        "StopTalking"
+                    ]
+                }
+            ]
+        },
+        {
+            "ID": 8,
+            "Speaker": "Magnus",
+            "Text": "Intet problem, det er derfor jeg er her",
+            "Options": [
+                {
+                    "Text": "FORTSÆT",
+                    "NextDialogueId": 0,
+                    "Events": [
+                        "StopTalking"
+                    ]
+                }
+            ]
+        },
+        {
+            "ID": 0,
+            "Speaker": "Magnus",
+            "Text": "intet problem det er derfor jeg er her",
+            "Options": [
+                {
+                    "Text": "Hej hej",
+                    "NextDialogueId": -1,
+                    "Events": [
+                        "StopTalking"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -7,15 +7,24 @@
             "Options": [
                 {
                     "Text": "Opsætning",
-                    "NextDialogueId": 2
+                    "NextDialogueId": 2,
+                    "Events": [
+                        "SmallNegativeAmplifier"
+                    ]
                 },
                 {
-                    "Text": "Faglighed",
-                    "NextDialogueId": 2
+                    "Text": "Faglige metoder?",
+                    "NextDialogueId": 2,
+                    "Events": [
+                        "MediumAmplifier"
+                    ]
                 },
                 {
                     "Text": "Chrono Trigger",
-                    "NextDialogueId": 3
+                    "NextDialogueId": 3,
+                    "Events": [
+                        "SmallAmplifier"
+                    ]
                 },
                 {
                     "Text": "Lige meget",
@@ -53,19 +62,19 @@
             "Options": [
                 {
                     "Text": "Option 1",
-                    "NextDialogueId": -1
+                    "NextDialogueId": 0
                 },
                 {
                     "Text": "Option 2",
-                    "NextDialogueId": -1
+                    "NextDialogueId": 0
                 },
                 {
                     "Text": "Option 3",
-                    "NextDialogueId": -1
+                    "NextDialogueId": 0
                 },
                 {
                     "Text": "Option 4",
-                    "NextDialogueId": -1
+                    "NextDialogueId": 0
                 }
             ]
         },
@@ -79,12 +88,6 @@
                     "NextDialogueId": -1,
                     "Events": [
                         "StopTalking"
-                    ],
-                    "Rewards": [
-                        {
-                            "RewardType": "Plagiat",
-                            "RewardAmount": 50
-                        }
                     ]
                 }
             ]

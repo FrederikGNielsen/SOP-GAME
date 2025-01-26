@@ -10,6 +10,6 @@ public class SectionButton : MonoBehaviour
     public void ImproveSection()
     {
         ComputerDocument.instance.sectionToImprove = section;
-        ComputerDocument.instance.isImproving = true;
+        ComputerDocument.instance.isImproving = !ComputerDocument.instance.isImproving;
     }
 }

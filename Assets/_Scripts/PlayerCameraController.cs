@@ -4,48 +4,51 @@ using UnityEngine;
 
 public class PlayerCameraController : MonoBehaviour
 {
-    [Header("Mouse settings")] 
+    [Header("Mouse settings")]
     public float sensitivity;
     public float smoothing;
     [Range(50, 100)]
     public float fieldOfView = 70;
     public Vector2 verticalClamp;
 
-    [Header("Booleans")] 
+    [Header("Booleans")]
     public bool mouseIsLocked;
 
-    [Header("Input Variables")] 
+    [Header("Input Variables")]
     public float mouseX;
     public float mouseY;
 
     private float rotationX;
     private float rotationY;
+    private Quaternion targetRotation;
+    private Transform playerTransform;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        playerTransform = transform.parent;
+        targetRotation = transform.localRotation;
     }
 
-    // Update is called once per frame
     void Update()
     {
         ChangeFov();
         inputHandler();
-        if(mouseIsLocked)
+        if (mouseIsLocked)
             moveHandler();
     }
 
     public void moveHandler()
     {
-        rotationY = mouseX * sensitivity;
+        rotationY += mouseX * sensitivity;
         rotationX -= mouseY * sensitivity;
 
         rotationX = Mathf.Clamp(rotationX, verticalClamp.x, verticalClamp.y);
 
-        transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-        transform.parent.rotation *= Quaternion.Euler(0, rotationY, 0);
+        targetRotation = Quaternion.Euler(rotationX, 0, 0);
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, smoothing * Time.deltaTime);
+        playerTransform.rotation = Quaternion.Slerp(playerTransform.rotation, Quaternion.Euler(0, rotationY, 0), smoothing * Time.deltaTime);
     }
-
-
 
     public void inputHandler()
     {
@@ -67,4 +70,3 @@ public class PlayerCameraController : MonoBehaviour
         GetComponent<Camera>().fieldOfView = fieldOfView;
     }
 }
-
