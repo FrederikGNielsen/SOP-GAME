@@ -55,11 +55,6 @@ public class ComputerDocument : MonoBehaviour
         {
             timeSliderText.text = formattedTime + " - Energy Spent: " + EnergySpending.ToString("F1").PadLeft(5, '0') + "/" + PlayerStats.instance.energy.ToString("F1").PadLeft(5, '0') + " - Words: " + approximateWords.ToString("F1").PadLeft(5, '0');
         }
-        
-        if (Input.GetKeyDown("space"))
-        {
-            Study();
-        }
     }
 
     public void Study()

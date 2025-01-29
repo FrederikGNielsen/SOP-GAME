@@ -70,11 +70,10 @@ public class GameManager : MonoBehaviour
     public void TimeUpdate()
     {
         timeOfDay += Time.deltaTime * timeScale * timeMultiplier;
-        sun.transform.rotation = Quaternion.Euler(new Vector3((timeOfDay) / dayLength * 360f, 0, 0));
-        
-        float temp = timeOfDay + sunriseOffset;
-        int hours = Mathf.FloorToInt(((temp + sunriseOffset) / dayLength) * 24);
-        int minutes = Mathf.FloorToInt((((temp + sunriseOffset) / dayLength) * 24 * 60) % 60);
+        sun.transform.rotation = Quaternion.Euler(new Vector3((timeOfDay / dayLength * 360f) + sunriseOffset, 0, 0));
+
+        int hours = Mathf.FloorToInt((timeOfDay / dayLength) * 24);
+        int minutes = Mathf.FloorToInt(((timeOfDay / dayLength) * 24 * 60) % 60);
         timeString = string.Format("{0:00}:{1:00}", hours, minutes);
 
         dateString = days + 18 + "/11/2024";

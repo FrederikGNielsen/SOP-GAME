@@ -16,6 +16,7 @@ public class Bed : MonoBehaviour
     private void Start()
     {
         timeText.font = Resources.Load<TMP_FontAsset>("Fonts & Materials/LiberationMono-Regular SDF"); // Use a TMP_FontAsset
+        timeText.text = "00:00:00";
     }
 
     public void Interact()
